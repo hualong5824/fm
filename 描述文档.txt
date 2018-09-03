@@ -1,0 +1,19 @@
+电商后端管理项目：
+1.配置API 
+①：首先有个数据库，把用到的sql文件导入到数据库中，
+②：下一步Mysql服务器开启。
+③：配置default.json文件。先让接口服务器跑起来。那么怎么跑呢,通过什么方式跑呢。参考以下：
+
+2.通过API接口文档，了解接口说明。
+①：我们看到此项目中运用了Token认证（一种令牌，来源于服务端，登陆
+成功后会自动返回，会有时间周期，可自己再default.json中配置）
+②：后端返回数据格式统一为JSON
+③：支持的请求方式 get post put patch delete head options
+④：返回状态码 200 201 204 400 401等
+
+3.测试接口(postman软件测试)
+①：可参考接口文档（登陆验证接口验证是否正常）
+http://localhost:8888/api/private/v1/login?username=hualong&password=123
+
+4.项目起步
+

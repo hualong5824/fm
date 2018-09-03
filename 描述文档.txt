@@ -26,6 +26,7 @@ http://localhost:8888/api/private/v1/login?username=hualong&password=123
     index.js  路由配置文件
     App.vue  单页面应用程序的根组件
     main.js  开机键，负责把根组件替换到根节点
+    Login.vue根组件文件
 static  可以放一些静态资源
 
 5.git工作流程
@@ -39,5 +40,13 @@ static  可以放一些静态资源
 7.项目使用的是element-ui （一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库
 移动端是：mint-ui）
 ①：安装运行依赖   npm install element -ui 
-②：配置element -ui
+②：配置element -ui 官网上面（引入 Element）板块中 直接复制粘贴即可。
+
+8.登陆路由配置
+①：把cli创建的一些没用的文件或者引入模块给删除。
+②：创建views文件夹里面放置Login.vue 根组件文件
+③: 用@在index.js导入组件，文件中配置login等于页面的路由
+（@，就是从src路径开始，可在webpack.base.conf配置修改路径）
+
+
 

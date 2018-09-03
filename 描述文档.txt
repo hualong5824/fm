@@ -28,8 +28,16 @@ http://localhost:8888/api/private/v1/login?username=hualong&password=123
     main.js  开机键，负责把根组件替换到根节点
 static  可以放一些静态资源
 
-5.通过githubDesktop 软件管理本项目 把本地项目加载到软件中，
+5.git工作流程
+①：利用git branch 查看分支，git checkout -b dev-login切换并新建分支
+②：初始化本地项目 git init git add . 传到暂存区 git commit -m ‘备注’ 放置本地仓库
+③：将本地仓库push到云端git
+
+6.通过githubDesktop 软件管理本项目 把本地项目加载到软件中，
 或者git仓库中直接克隆下来皆可。
 
-6.
+7.项目使用的是element-ui （一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库
+移动端是：mint-ui）
+①：安装运行依赖   npm install element -ui 
+②：配置element -ui
 

@@ -16,4 +16,20 @@
 http://localhost:8888/api/private/v1/login?username=hualong&password=123
 
 4.项目起步
+①：vue-cli初始化项目
+②：初始化后文件介绍： 
+    node_modules  第三方包
+    src  项目源码
+    assets  存储资源，例如 css、img、fonts
+    components  存储所有公共组件
+    router  路由
+    index.js  路由配置文件
+    App.vue  单页面应用程序的根组件
+    main.js  开机键，负责把根组件替换到根节点
+static  可以放一些静态资源
+
+5.通过githubDesktop 软件管理本项目 把本地项目加载到软件中，
+或者git仓库中直接克隆下来皆可。
+
+6.
 

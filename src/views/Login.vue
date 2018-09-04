@@ -1,21 +1,21 @@
 <template>
-
     <div class="login-wrap">
     <el-form
     class="login-form"
     label-position="top"
-    label-width="80px">
+    label-width="80px"
+    :model="formData">
     <div class="login-div-h2">
           <h2>登录界面</h2>
     </div>
   <el-form-item label="账号:">
-    <el-input></el-input>
+    <el-input v-model="formData.username"></el-input>
   </el-form-item>
-  <el-form-item label="密码:" class="login-form-password">
-    <el-input></el-input>
+  <el-form-item  label="密码:" class="login-form-password">
+    <el-input v-model="formData.password" @keyup.enter.native="handleLogin" type="password"></el-input>
   </el-form-item>
    <el-form-item class="login-form-button">
-    <el-button type="primary">立即登录</el-button>
+    <el-button type="primary" @click="handleLogin">立即登录</el-button>
   </el-form-item>
 </el-form>
 </div>
@@ -23,7 +23,39 @@
 </template>
 
 <script>
-
+export default {
+  data () {
+    return {
+      formData: {
+        username: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    handleLogin () {
+      if (this.formData.username.trim().length === 0) {
+        this.$message.error('不能为空')
+        return
+      }
+      this.$http
+        .post('login', this.formData)
+        .then((result) => {
+          console.log(result)
+          const { meta: { msg, status } } = result.data
+          if (status === 200) {
+            this.$message.success(msg)
+            sessionStorage.setItem('token', result.data.data.token)
+            this.$router.push('/')
+          } else {
+            this.$message.error(msg)
+          }
+        }).catch((err) => {
+          console.log(err)
+        })
+    }
+  }
+}
 </script>
 
 <style>

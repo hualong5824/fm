@@ -15,7 +15,7 @@
     <el-input></el-input>
   </el-form-item>
    <el-form-item class="login-form-button">
-    <el-button type="primary" @click="onSubmit" >立即登录</el-button>
+    <el-button type="primary">立即登录</el-button>
   </el-form-item>
 </el-form>
 </div>

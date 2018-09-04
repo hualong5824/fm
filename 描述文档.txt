@@ -42,11 +42,19 @@ static  可以放一些静态资源
 ①：安装运行依赖   npm install element -ui 
 ②：配置element -ui 官网上面（引入 Element）板块中 直接复制粘贴即可。
 
-8.登陆路由配置
+8.登陆页面路由配置
 ①：把cli创建的一些没用的文件或者引入模块给删除。
 ②：创建views文件夹里面放置Login.vue 根组件文件
-③: 用@在index.js导入组件，文件中配置login等于页面的路由
+③: 用@在index.js导入组件，在Router中配置login页面的路由
 （@，就是从src路径开始，可在webpack.base.conf配置修改路径）
 
+9.登陆页面结构与样式
+①：页面依赖于element-ui 把所需要的form表单结构复制到login.vue文件中。
+②：利用CSS样式，在原有的样式上稍微修改。（路由部分已在第8配置完毕）
+
+10配置封装axios
+①：在Src文件夹下创建一个plugins（插件）文件夹，在创建一个MyHttp.js文件用于放置封装的axios。
+②：创建完毕后，导出。
+③：在main.js中导入进来模块
 
 
